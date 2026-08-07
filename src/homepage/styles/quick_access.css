@@ -1,0 +1,42 @@
+
+.left {
+  padding-block: var(--padding-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xs);
+}
+
+.left .quickAccessContainer {
+  display: flex;
+  gap: var(--gap-xs);
+  flex-wrap: wrap;
+  padding-block: var(--padding-block-xs);
+  padding-right: var(--padding-sm);
+  max-height: 40%;
+}
+
+main .left .quickAccessContainer > a {
+  padding: var(--padding-block-xs) var(--padding-inline-xs);
+  border-radius: var(--rounded-xs);
+  background: var(--surface-light);
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.left .quickAccessContainer > a:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-blue);
+}
+
+.left .quickAccessContainer img {
+  height: 1.5rem;
+  width: 1.5rem;
+  object-fit: contain;
+}
+
+.left .heading h2 {
+  padding-bottom: 4px;
+  opacity: 0.5;
+  letter-spacing: 2px;
+  font-size: var(--font-size-sm);
+}

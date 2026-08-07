@@ -7,10 +7,13 @@
     "default_popup": "src/popup/popup.html",
     "default_title": "Orbit",
     "default_icon": {
-      "16": "src/public/icons/icon-16.png",
-      "32": "src/public/icons/icon-32.png",
-      "48": "src/public/icons/icon-48.png",
-      "128": "src/public/icons/icon-128.png"
+      "16": "src/public/logo/icon-16.png",
+      "32": "src/public/logo/icon-32.png",
+      "48": "src/public/logo/icon-48.png",
+      "128": "src/public/logo/icon-128.png"
     }
+  },
+  "chrome_url_overrides": {
+    "newtab": "./src/homepage/index.html"
   }
 }

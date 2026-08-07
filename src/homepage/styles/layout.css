@@ -1,0 +1,29 @@
+
+.container {
+  padding: var(--padding-sm);
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+main {
+  display: flex;
+  width: 100%;
+}
+
+main {
+  flex: 1;
+  min-height: 0;
+}
+
+header > div:first-of-type,
+header > div:last-of-type,
+main .left,
+main .right {
+  flex: 0 0 25%;
+}
+
+header > div:nth-child(2),
+main .middle {
+  flex: 0 0 50%;
+}

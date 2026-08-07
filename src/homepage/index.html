@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Orbit</title>
+    <link rel="icon" href="../public/logo/icon-128.png" type="image/x-icon" />
+
+    <link rel="stylesheet" href="../public/libs/github-dark.min.css" />
+    <link rel="stylesheet" href="main.css" />
+
+    <script src="../public/libs/highlight.min.js"></script>
+    <script src="./main.js" defer type="module"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="background"></div>
+
+      <header>
+        <div>
+          <h1>Muhammad Azan</h1>
+          <p>Web Developer</p>
+        </div>
+
+        <div class="searchInputContainer">
+          <img src="../public/icons/search_icon.svg" alt="" />
+
+          <form action="https://www.google.com/search" method="get">
+            <input type="text" name="q" placeholder="Search..." autofocus />
+          </form>
+        </div>
+
+        <div class="dateContainer">
+          <p id="time">00:00</p>
+
+          <div>
+            <p>
+              <span id="day">Monday</span>
+              <span>,</span>
+              <span id="month">January</span>
+              <span id="date">1</span>
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="left">
+          <div class="heading">
+            <h2>Quick Access</h2>
+          </div>
+          <div class="quickAccessContainer"></div>
+        </section>
+        <section class="middle">
+          <div class="aiChatContainer glassCard">
+            <div class="header">
+              <div class="aiHeading">
+                <div class="circle"></div>
+                <h2>Instant Chat</h2>
+              </div>
+            </div>
+
+            <div class="chat no-scrollbar"></div>
+
+            <div class="promptInputContainer">
+              <input
+                type="text"
+                id="promptInput"
+                placeholder="Ask Instant Anything..."
+              />
+              <button
+                id="sendPrompt"
+                class="hoverAnimation"
+              >
+                <img src="../public/icons/send.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="right"></section>
+      </main>
+    </div>
+  </body>
+</html>
