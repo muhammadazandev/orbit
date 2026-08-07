@@ -15,5 +15,6 @@
   },
   "chrome_url_overrides": {
     "newtab": "./src/homepage/index.html"
-  }
+  },
+  "permissions": ["storage", "tabs"]
 }

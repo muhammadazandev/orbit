@@ -73,10 +73,15 @@ async function aiResponseAndDisplay() {
     );
 
     if (!response.ok) {
-      alert("Something went wrong, please try again later");
+      const error = await response.json();
+      throw new Error(error.error || "Request failed");
     }
 
     const data = await response.json();
+
+    if (!data.response) {
+      throw new Error("No response returned from API");
+    }
 
     const aiResponse = data.response;
 
@@ -110,7 +115,14 @@ async function aiResponseAndDisplay() {
 
     hljs.highlightAll();
   } catch (error) {
-    console.log(error);
+    console.error(error);
+
+    chatContainer.querySelector(".loading").remove();
+    chatContainer.innerHTML += `
+    <div class="error">
+      ${error.message}
+    </div>
+  `;
   } finally {
     isSending = false;
   }
