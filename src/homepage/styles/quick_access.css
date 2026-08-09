@@ -1,4 +1,3 @@
-
 .left {
   padding-block: var(--padding-md);
   display: flex;
@@ -15,23 +14,33 @@
   max-height: 40%;
 }
 
-main .left .quickAccessContainer > a {
-  padding: var(--padding-block-xs) var(--padding-inline-xs);
-  border-radius: var(--rounded-xs);
-  background: var(--surface-light);
+.left .quickAccessContainer > a {
+  padding: .8rem;
+  border-radius: var(--rounded-sm);
+  /* background: var(--surface-light); */
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-color);
   transition: all 0.2s ease;
+  display: flex;
+  gap: var(--gap-xs);
+  width: 100%;
+  align-items: center;
+  text-decoration: none;
 }
 
 .left .quickAccessContainer > a:hover {
   transform: translateY(-5px);
   border-color: var(--accent-blue);
+  margin-top: 5px;
 }
 
 .left .quickAccessContainer img {
-  height: 1.5rem;
-  width: 1.5rem;
+  height: 1.6rem;
+  width: 1.6rem;
   object-fit: contain;
+  border-radius: .5rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: .25rem;
 }
 
 .left .heading h2 {
@@ -39,4 +48,29 @@ main .left .quickAccessContainer > a {
   opacity: 0.5;
   letter-spacing: 2px;
   font-size: var(--font-size-sm);
+}
+
+.left .quickAccessContainer a p {
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 85%;
+}
+
+.left .quickAccessContainer #quickAccessTitle {
+  font-size: .7rem;
+  font-weight: bold;
+  margin-bottom: .2rem;
+  text-wrap: nowrap;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.left .quickAccessContainer #quickAccessURL {
+  font-size: .6rem;
+  opacity: 0.5;
+  text-wrap: nowrap;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
