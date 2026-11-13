@@ -31,7 +31,11 @@ addCheckbox.addEventListener("change", async (e) => {
     if (alreadyExist) return;
 
     const splittedWords = url?.split(".")
-    const targetName = splittedWords.at(-2);
+    let targetName = splittedWords.at(-2);
+
+    if (!targetName) {
+      targetName = splittedWords.at(-1)
+    }
 
     quickAccess.push({ name: targetName, url: tabs.url, favIconUrl: tabs.favIconUrl, title: tabs.title })
 
