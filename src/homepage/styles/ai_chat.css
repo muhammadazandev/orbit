@@ -38,6 +38,8 @@
   flex: 1;
   min-height: 0;
   overflow-y: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .aiChatContainer .promptInputContainer {

@@ -18,8 +18,8 @@
 
       <header>
         <div>
-          <h1>Muhammad Azan</h1>
-          <p>Web Developer</p>
+          <h1 id="userName">Your Name</h1>
+          <p id="userRole">Your Role</p>
         </div>
 
         <div class="searchInputContainer">
@@ -49,7 +49,7 @@
           <div class="heading">
             <h2>Quick Access</h2>
           </div>
-          <div class="quickAccessContainer no-scrollbar"></div>
+          <div class="quickAccessContainer"></div>
         </section>
         <section class="middle">
           <div class="aiChatContainer glassCard">
@@ -76,6 +76,35 @@
         </section>
         <section class="right"></section>
       </main>
+
+      <div class="setupModalContainer">
+        <form class="setupModal glassCard">
+          <h2>Setup</h2>
+          <div>
+            <p>What's your name?</p>
+            <input
+              required
+              type="text"
+              id="nameInput"
+              placeholder="Enter your name"
+              maxlength="14"
+              minlength="4"
+            />
+          </div>
+          <div>
+            <p>What's your role?</p>
+            <input
+              minlength="4"
+              maxlength="30"
+              type="text"
+              required
+              id="roleInput"
+              placeholder="Enter your role"
+            />
+          </div>
+          <button type="submit" id="saveInfo">Save</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>
